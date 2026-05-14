@@ -27,7 +27,7 @@ io.on("connection", (socket) => {
 
     if (!existing) {
       devices.push({
-        id: socket.id,
+        id: device.id || socket.id,
         name: device.name,
         type: device.type || "Android",
         online: true,
